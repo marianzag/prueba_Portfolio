@@ -1,0 +1,283 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    height: 65px;
+    background-color: rgba(65, 58, 78, 0.793);
+    color: rgba(187, 185, 185, 0.785);
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+header:hover{
+    background-color: rgb(65, 58, 78);
+    color: rgb(213, 211, 211);
+    transition: 0.3s;
+}
+
+.layout{
+    position: relative;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 0;
+
+    background-color: #1f1f1f;
+    background-image:
+        repeating-linear-gradient(
+            40deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.05) 10px,
+            transparent 10px,
+            transparent 20px
+        );
+}
+
+.decor-left{
+    left: 0;
+}
+
+.decor-right{
+    right: 0;
+    transform: scaleX(-1);
+}
+.contenido{
+    position: relative;
+    z-index: 1;
+    margin: 0 100px;
+}
+
+.uno{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: calc(90vh - 35px);
+    background-color: #656464;
+    color: white;
+    /* padding-top: 10%; */
+}
+
+.uno:hover{
+    background-color: #545353;
+    transition: 0.2s;
+}
+
+/*.uno:hover .cara{
+    transition: 0.2s;
+    height: 60%;
+}
+
+.uno:hover .caja-cara{
+    transition: 0.2s;  
+    width: 50%; 
+}
+
+.uno:hover .caja-central{
+    transition: 0.2s;
+    width: 55%; 
+    height: 55%;
+}*/
+
+.cara{
+    border-radius: 500px;
+    height: 50%;
+}
+
+.caja-central{
+    margin-top: 10%;
+    width: 62%; 
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.caja-cara{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: rgba(65, 58, 78, 0.793);
+    padding-left: 4%;
+}
+
+.caja-presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: rgba(65, 58, 78, 0.793);
+    color: rgba(187, 185, 185, 0.785);
+    padding-right: 8%;
+}
+
+.caja-presentacion .presentacion{
+    font-size: 90%;
+}
+
+
+.dos{
+    background-color: #aeadad;
+    color: #696969;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.dos:hover{
+    background-color: #d4d4d4e6;
+    color: #303030;
+    transition:0.2s;
+}
+
+.tres{
+    background-color: rgba(65, 58, 78, 0.793);
+    color: rgba(187, 185, 185, 0.785);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.aptitudes{
+    width: 50%;
+}
+
+.tech-list{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.tech{
+    height: 90px;
+}
+
+.tres:hover{
+    background-color: rgb(65, 58, 78);
+    color: rgb(213, 211, 211);
+    transition: 0.2s;
+}
+
+.Linea_Divisora{
+    background-color:#303030;
+    height: 2px;
+    width: 100%;
+}
+
+footer{
+    font-size: 20px;
+    background-color:rgba(59, 58, 58, 0.767);
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top:40px;
+    height: 120px;
+}
+
+footer:hover{
+    background-color:rgba(0, 0, 0, 0.83);
+    transition: 0.2s;
+}
+
+footer p{
+    color:#444441f3;
+}
+
+footer a{
+    color:#fffff8;
+}
+
+footer .Contactanos{
+    width: 40%;
+    margin-top: 0px;
+    text-align: center;
+}
+
+footer .Redes{
+    margin-bottom: 0px;
+}
+
+footer .Redes div{
+    display:inline-block;
+    text-align: center;
+    margin:0px;
+    width:100px;
+}
+
+footer .Redes div a img{
+    width:80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.4s;
+}
+
+footer .Redes div a img:hover{
+    width:100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transition: 0.4s;
+}
+
+
+@media (max-width: 1000px) {
+    .sidebar{
+        display: none;
+    }
+
+    .contenido{
+        margin: 0;
+    }
+
+    .caja-central{
+        width: 80%;
+        height: 70%;
+        flex-direction: column;
+        border-radius: 40px;
+    }
+    .caja-cara{
+        width: 94%;
+        height: 50%;
+        padding-right: 20%;
+        
+    }
+    .caja-presentacion{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items:end;
+    }
+    .ante-presentacion{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        padding: 5%;
+    }
+    .aptitudes{
+        width: auto;
+    }
+    .dos{
+        height: auto;
+        padding: 0 10px 10px 10px;
+
+    }
+    .tres{
+        height: auto;
+    }
+}
